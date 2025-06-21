@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #4070f4;
+}
+
+/* ========================= LOGIN STYLES ========================= */
+.login-container {
+  position: relative;
+  max-width: 430px;
+  width: 100%;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  padding: 30px;
+}
+
+.login-container .form.login .title {
+  font-size: 27px;
+  font-weight: 600;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.login-container .form.login .title::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 30px;
+  background-color: #4070f4;
+  border-radius: 25px;
+}
+
+.login-container .input-field {
+  position: relative;
+  height: 50px;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.login-container .input-field input {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  padding: 0 35px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  border-bottom: 2px solid #ccc;
+  border-top: 2px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.login-container .input-field input:is(:focus, :valid) {
+  border-bottom-color: #4070f4;
+}
+
+.login-container .input-field i {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #999;
+  font-size: 23px;
+  transition: all 0.2s ease;
+}
+
+.login-container .input-field input:is(:focus, :valid) ~ i {
+  color: #4070f4;
+}
+
+.login-container .input-field i.icon {
+  left: 0;
+}
+
+.login-container .checkbox-text {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.login-container .checkbox-content {
+  display: flex;
+  align-items: center;
+}
+
+.login-container .checkbox-content input {
+  margin-right: 10px;
+  accent-color: #4070f4;
+}
+
+.login-container .text {
+  font-size: 14px;
+  color: #333;
+}
+
+.login-container a.text {
+  color: #4070f4;
+  text-decoration: none;
+}
+
+.login-container a:hover {
+  text-decoration: underline;
+}
+
+.login-container .button {
+  margin-top: 35px;
+}
+
+.login-container .button input {
+  width: 100%;
+  border: none;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  border-radius: 6px;
+  background-color: #4070f4;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.login-container .button input:hover {
+  background-color: #265df2;
+}
+
+.login-container .login-signup {
+  margin-top: 30px;
+  text-align: center;
+}
+
+
+/* ========================= REGISTER STYLES ========================= */
+.register-container {
+  background: #ffffff;
+  padding: 30px 40px;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 450px;
+}
+
+.register-container .title-reg {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-align: center;
+  display: block;
+}
+
+.register-container .input-field {
+  position: relative;
+  height: 50px;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.register-container .input-field input {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  padding: 0 35px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  border-bottom: 2px solid #ccc;
+  border-top: 2px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.register-container .input-field input:is(:focus, :valid) {
+  border-bottom-color: #4070f4;
+}
+
+.register-container .input-field i {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #999;
+  font-size: 23px;
+  transition: all 0.2s ease;
+  left: 0;
+}
+
+.register-container .input-field input:is(:focus, :valid) ~ i {
+  color: #4070f4;
+}
+
+.register-container .checkbox-text {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.register-container .checkbox-content input {
+  margin-right: 10px;
+  accent-color: #4070f4;
+}
+
+.register-container .text {
+  font-size: 14px;
+  color: #333;
+}
+
+.register-container a.text {
+  color: #4070f4;
+  text-decoration: none;
+}
+
+.register-container a:hover {
+  text-decoration: underline;
+}
+
+.register-container .button {
+  margin-top: 35px;
+}
+
+.register-container .button input {
+  width: 100%;
+  border: none;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  border-radius: 6px;
+  background-color: #4070f4;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.register-container .button input:hover {
+  background-color: #265df2;
+}
+
+.register-container .login-signup {
+  margin-top: 30px;
+  text-align: center;
+}
+
+/* Role dropdown in register */
+.register-container .select-field {
+  position: relative;
+  height: 50px;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.register-container .select-field select {
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  width: 100%;
+  height: 100%;
+  padding: 0 35px;
+  font-size: 16px;
+  border-bottom: 2px solid #ccc;
+  border-top: 2px solid transparent;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.register-container .select-field select:focus {
+  border-bottom-color: #4070f4;
+}
+
+.register-container .select-field i.icon {
+  pointer-events: none;
+}
+
+/* Optional dropdown arrow (for modern look) */
+.register-container .select-field::after {
+  content: '\25BC'; /* Down arrow */
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 14px;
+  color: #999;
+  pointer-events: none;
+}
+
+
+.flash-container {
+  margin: 10px auto;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.flash {
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+
+}
+
+.flash.error {
+  background-color: #ffcccc;
+  color: #cc0000;
+}
+
+.flash.success {
+  background-color: #ccffcc;
+  color: #006600;
+}
