@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register - SmartWatcher AI</title>
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+
+<body>
+  <div class="register-container">
+    <div class="form signup">
+      {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+      <div class="flash-container">
+        {% for category, message in messages %}
+        <div class="flash {{ category }}">{{ message }}</div>
+        {% endfor %}
+      </div>
+      {% endif %}
+      {% endwith %}
+
+      <span class="title-reg">Registration</span>
+      <form action="/register" method="post">
+        <div class="input-field">
+          <input type="text" name="name" placeholder="Enter your name" required />
+          <i class="uil uil-user icon"></i>
+        </div>
+        <div class="input-field">
+          <input type="text" name="email" placeholder="Enter your email" required />
+          <i class="uil uil-envelope icon"></i>
+        </div>
+        <div class="input-field select-field">
+          <select name="role" required>
+            <option value="" disabled selected hidden>Select Role</option>
+            <option value="organisation">Organisation</option>
+            <option value="user">User</option>
+          </select>
+          <i class="uil uil-user icon"></i>
+        </div>
+        <div class="input-field">
+          <input type="password" name="password" placeholder="Create a password" required />
+          <i class="uil uil-lock icon"></i>
+        </div>
+        <div class="checkbox-text">
+          <div class="checkbox-content">
+            <input type="checkbox" id="termCon" required />
+            <label for="termCon" class="text">I accept all terms and conditions</label>
+          </div>
+        </div>
+        <div class="input-field button">
+          <input type="submit" value="Signup" />
+        </div>
+      </form>
+      <div class="login-signup">
+        <span class="text">Already a member?
+          <a href="/login" class="text">Login Now</a>
+        </span>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
